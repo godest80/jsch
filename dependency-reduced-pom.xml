@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>oss-parent</artifactId>
+    <groupId>org.sonatype.oss</groupId>
+    <version>6</version>
+    <relativePath>../pom.xml/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jcraft</groupId>
+  <artifactId>jsch</artifactId>
+  <name>JSch</name>
+  <version>0.1.54_EVO</version>
+  <description>JSch is a pure Java implementation of SSH2</description>
+  <url>http://www.jcraft.com/jsch/</url>
+  <developers>
+    <developer>
+      <id>ymnk</id>
+      <name>Atsuhiko Yamanaka</name>
+      <email>ymnk at jcraft D0t com</email>
+      <url>http://github.com/ymnk</url>
+      <organization>JCraft,Inc.</organization>
+      <organizationUrl>http://www.jcraft.com/</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+      <timezone>+9</timezone>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Revised BSD</name>
+      <url>http://www.jcraft.com/jsch/LICENSE.txt</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:git:http://git.jcraft.com/jsch.git</connection>
+    <developerConnection>scm:git:http://git.jcraft.com/jsch.git</developerConnection>
+    <url>http://git.jcraft.com/jsch.git</url>
+  </scm>
+  <organization>
+    <name>JCraft,Inc.</name>
+    <url>http://www.jcraft.com/</url>
+  </organization>
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>1.0-alpha-5</version>
+      </extension>
+    </extensions>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+          <forceJavacCompilerUse>true</forceJavacCompilerUse>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
