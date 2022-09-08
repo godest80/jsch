@@ -68,7 +68,7 @@ public class Session implements Runnable{
   private static final int PACKET_MAX_SIZE = 256 * 1024;
 
   private byte[] V_S;                                 // server version
-  private byte[] V_C=Util.str2byte("SSH-2.0-JSCH-"+JSch.VERSION); // client version
+  private byte[] V_C=Util.str2byte("SSH-2.0-JSCH_"+JSch.VERSION); // client version
 
   private byte[] I_C; // the payload of the client's SSH_MSG_KEXINIT
   private byte[] I_S; // the payload of the server's SSH_MSG_KEXINIT
@@ -250,8 +250,9 @@ public class Session implements Runnable{
 
       {
 	// Some Cisco devices will miss to read '\n' if it is sent separately.
-	byte[] foo=new byte[V_C.length+1];
+    byte[] foo=new byte[V_C.length+2];
 	System.arraycopy(V_C, 0, foo, 0, V_C.length);
+	foo[foo.length-2]=(byte)0x0D;
 	foo[foo.length-1]=(byte)'\n';
 	io.put(foo, 0, foo.length);
       }
