@@ -1,2 +1,35 @@
 eclipse.preferences.version=1
 org.eclipse.jdt.apt.aptEnabled=false
+org.eclipse.jdt.apt.genTestSrcDir=.apt_generated_tests
+# Indentación
+org.eclipse.jdt.core.formatter.tabulation.char=space
+org.eclipse.jdt.core.formatter.tabulation.size=4
+org.eclipse.jdt.core.formatter.indentation.size=4
+org.eclipse.jdt.core.formatter.use_tabs_only_for_leading_indentations=false
+
+# Límites de longitud de línea
+org.eclipse.jdt.core.formatter.lineSplit=800
+
+# Manejo de saltos de línea en llamadas a métodos
+org.eclipse.jdt.core.formatter.join_wrapped_lines=false
+org.eclipse.jdt.core.formatter.keep_empty_array_initializer_on_one_line=true
+org.eclipse.jdt.core.formatter.keep_empty_object_initializer_on_one_line=true
+org.eclipse.jdt.core.formatter.keep_guardian_clause_on_one_line=true
+org.eclipse.jdt.core.formatter.alignment_for_arguments_in_method_invocation=16
+org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration=16
+
+# Otros ajustes de estilo
+org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_type_declaration=false
+org.eclipse.jdt.core.formatter.insert_space_before_semicolon=false
+org.eclipse.jdt.core.formatter.insert_space_after_comma_in_method_invocation_arguments=true
+
+# Control de llaves (colocar en la misma línea)
+org.eclipse.jdt.core.formatter.brace_position_for_type_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_method_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_constructor_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_block=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_array_initializer=end_of_line
+
+# Control de else y catch en líneas separadas
+org.eclipse.jdt.core.formatter.keep_else_statement_on_same_line=false
+org.eclipse.jdt.core.formatter.keep_catch_clause_on_same_line=false

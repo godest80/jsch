@@ -1,17 +1,41 @@
 eclipse.preferences.version=1
-org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
-org.eclipse.jdt.core.compiler.codegen.methodParameters=do not generate
-org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
-org.eclipse.jdt.core.compiler.codegen.unusedLocal=preserve
-org.eclipse.jdt.core.compiler.compliance=1.8
-org.eclipse.jdt.core.compiler.debug.lineNumber=generate
-org.eclipse.jdt.core.compiler.debug.localVariable=generate
-org.eclipse.jdt.core.compiler.debug.sourceFile=generate
-org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=21
+org.eclipse.jdt.core.compiler.compliance=21
 org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled
-org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
-org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=warning
+org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=ignore
 org.eclipse.jdt.core.compiler.processAnnotations=disabled
 org.eclipse.jdt.core.compiler.release=disabled
-org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.compiler.source=21
+# Indentación
+org.eclipse.jdt.core.formatter.tabulation.char=space
+org.eclipse.jdt.core.formatter.tabulation.size=4
+org.eclipse.jdt.core.formatter.indentation.size=4
+org.eclipse.jdt.core.formatter.use_tabs_only_for_leading_indentations=false
+
+# Límites de longitud de línea
+org.eclipse.jdt.core.formatter.lineSplit=800
+
+# Manejo de saltos de línea en llamadas a métodos
+org.eclipse.jdt.core.formatter.join_wrapped_lines=false
+org.eclipse.jdt.core.formatter.keep_empty_array_initializer_on_one_line=true
+org.eclipse.jdt.core.formatter.keep_empty_object_initializer_on_one_line=true
+org.eclipse.jdt.core.formatter.keep_guardian_clause_on_one_line=true
+org.eclipse.jdt.core.formatter.alignment_for_arguments_in_method_invocation=16
+org.eclipse.jdt.core.formatter.alignment_for_parameters_in_method_declaration=16
+
+# Otros ajustes de estilo
+org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_type_declaration=false
+org.eclipse.jdt.core.formatter.insert_space_before_semicolon=false
+org.eclipse.jdt.core.formatter.insert_space_after_comma_in_method_invocation_arguments=true
+
+# Control de llaves (colocar en la misma línea)
+org.eclipse.jdt.core.formatter.brace_position_for_type_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_method_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_constructor_declaration=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_block=end_of_line
+org.eclipse.jdt.core.formatter.brace_position_for_array_initializer=end_of_line
+
+# Control de else y catch en líneas separadas
+org.eclipse.jdt.core.formatter.keep_else_statement_on_same_line=false
+org.eclipse.jdt.core.formatter.keep_catch_clause_on_same_line=false
