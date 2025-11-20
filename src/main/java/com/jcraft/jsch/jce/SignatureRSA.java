@@ -68,16 +68,21 @@ public class SignatureRSA implements com.jcraft.jsch.SignatureRSA{
     int j=0;
     byte[] tmp;
 
-    if(sig[0]==0 && sig[1]==0 && sig[2]==0){
-    j=((sig[i++]<<24)&0xff000000)|((sig[i++]<<16)&0x00ff0000)|
+    if(sig != null && sig.length >= 3 && sig[0]==0 && sig[1]==0 && sig[2]==0){
+      j=((sig[i++]<<24)&0xff000000)|((sig[i++]<<16)&0x00ff0000)|
 	((sig[i++]<<8)&0x0000ff00)|((sig[i++])&0x000000ff);
-    i+=j;
-    j=((sig[i++]<<24)&0xff000000)|((sig[i++]<<16)&0x00ff0000)|
+      i+=j;
+      j=((sig[i++]<<24)&0xff000000)|((sig[i++]<<16)&0x00ff0000)|
 	((sig[i++]<<8)&0x0000ff00)|((sig[i++])&0x000000ff);
-    tmp=new byte[j]; 
-    System.arraycopy(sig, i, tmp, 0, j); sig=tmp;
+      tmp=new byte[j]; 
+      System.arraycopy(sig, i, tmp, 0, j); sig=tmp;
     }
 //System.err.println("j="+j+" "+Integer.toHexString(sig[0]&0xff));
-    return signature.verify(sig);
+    boolean result = signature.verify(sig);
+    if (!result) {
+      System.out.println("DEBUG SignatureRSA.verify: verificación falló. Longitud de firma procesada: " + 
+              (sig != null ? sig.length : "null"));
+    }
+    return result;
   }
 }
