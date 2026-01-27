@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <parent>
-    <artifactId>oss-parent</artifactId>
-    <groupId>org.sonatype.oss</groupId>
-    <version>6</version>
-    <relativePath>../pom.xml/pom.xml</relativePath>
-  </parent>
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jcraft</groupId>
   <artifactId>jsch</artifactId>
   <name>JSch</name>
-  <version>0.1.54_EVO</version>
+  <version>0.1.55_EVO</version>
   <description>JSch is a pure Java implementation of SSH2</description>
   <url>http://www.jcraft.com/jsch/</url>
   <developers>
@@ -44,13 +38,6 @@
     <url>http://www.jcraft.com/</url>
   </organization>
   <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ssh-external</artifactId>
-        <version>1.0-alpha-5</version>
-      </extension>
-    </extensions>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
